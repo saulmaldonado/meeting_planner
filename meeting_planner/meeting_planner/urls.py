@@ -16,6 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# imported views
+from website.views import welcome, date, about
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', welcome), # empty string will map localhost:8000/ to welcome view
+    path('date', date),
+    path('about', about)
 ]
