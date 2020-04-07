@@ -26,5 +26,5 @@ urlpatterns = [
     path('', welcome), # empty string will map localhost:8000/ to welcome view
     path('date', date),
     path('about', about),
-    path('meeting/<int:id>', detail)
+    path('meeting/<int:id>', detail, name='detail') # name parameter is used for dynamically creating urls for the templates
 ]

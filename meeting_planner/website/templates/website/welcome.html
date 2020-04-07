@@ -7,8 +7,14 @@
 </head>
 <body>
     <h1>Welcome to the Meeting Planner!</h1>
-    <p>
-        There are currently {{num_meetings}} meetings in the database.
-    </p>
+    <ul>
+        {% for meeting in meetings %}
+            <li>
+                <a href="{% url 'detail' meeting.id %}">
+                    {{meeting.title}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
