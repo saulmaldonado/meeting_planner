@@ -18,11 +18,13 @@ from django.urls import path
 
 # imported views
 from website.views import welcome, date, about
+from meetings.views import detail
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', welcome), # empty string will map localhost:8000/ to welcome view
     path('date', date),
-    path('about', about)
+    path('about', about),
+    path('meeting/<int:id>', detail)
 ]
