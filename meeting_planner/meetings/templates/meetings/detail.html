@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meeting: {{meeting.title}}</title>
-</head>
-<body>
+{% extends 'base.html'%}
+    {% block title %}Meeting: {{meeting.title}}{% endblock %}
+
+    {% block content %}
     <h2>{{meeting.title}}</h2>
     <p>
         This meeting has been scheduled on {{meeting.data}}, at {{meeting.start_time}} in <b>{{meeting.room}}</b>.
     </p>
-</body>
-</html>
+
+    <a href="{% url 'welcome' %}">Home</a>
+
+    {% endblock %}
