@@ -4,7 +4,7 @@
     {% block content %}
     <h2>{{meeting.title}}</h2>
     <p>
-        This meeting has been scheduled on {{meeting.data}}, at {{meeting.start_time}} in <b>{{meeting.room}}</b>.
+        This meeting has been scheduled on {{meeting.date}}, at {{meeting.start_time}} in <b>{{meeting.room}}</b>.
     </p>
 
     <a href="{% url 'welcome' %}">Home</a>
